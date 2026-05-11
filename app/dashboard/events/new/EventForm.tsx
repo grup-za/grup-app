@@ -158,7 +158,7 @@ export function EventForm({
     });
 
     if ("error" in result) {
-      setStep4State({ status: "error", message: result.error });
+      setStep4State({ status: "error", message: result.error ?? "An unexpected error occurred" });
     } else {
       setStep4State({
         status: "success",
